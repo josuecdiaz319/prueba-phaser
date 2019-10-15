@@ -1,0 +1,14 @@
+header {
+  text-align: center;
+  font-size: 50px;
+  font-style: italic;
+  color: red;
+}
+
+#id {
+  font-size:15px;
+}
+
+.class {
+  font-size: 10px;
+}

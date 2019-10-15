@@ -3,82 +3,20 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>My Game</title>
-    <script src="https://cdn.jsdelivr.net/npm/phaser@3.15.1/dist/phaser-arcade-physics.min.js"></script>
-    <!-- <link rel="stylesheet" type="text/css" href="mystyle.css"> -->
-    <style type="text/css">
-    body {
-        margin: 0;
-        text-align: center;
-    }
-    </style>
+    <title>Inicio</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
 </head>
+<header>
+  Página de inicio
+</header>
+<a href="/example/" id="id">Ejemplo</a>
+</br>
+<a href="/simplegame/" class="class">Juego simple</a>
+</br>
+<a href="/simplegame/" class="class">Juego simple 2</a>
 
 <body>
-    <div id="helloWorld"></div>
+
 </body>
-<script>
-
-var config = {
-    type: Phaser.CANVAS,
-    width: 800,
-    height: 600,
-    physics: {
-            default: 'arcade',
-            arcade: {
-                gravity: { y: 200 }
-            }
-        },
-    scene: {
-      preload: preload,
-      create: create
-    }
-};
-
-var game = new Phaser.Game(config);
-
-function preload ()
-{
-    this.load.setBaseURL('http://labs.phaser.io');
-
-    this.load.image('sky', 'assets/skies/space3.png');
-    this.load.image('logo', 'assets/sprites/phaser3-logo.png');
-    this.load.image('red', 'assets/particles/red.png');
-}
-
-function create ()
-{
-    this.add.image(400, 300, 'sky');
-
-    var particles = this.add.particles('red');
-
-    var emitter = particles.createEmitter({
-        speed: 100,
-        scale: { start: 1, end: 0 },
-        blendMode: 'ADD'
-    });
-
-    var logo = this.physics.add.image(400, 100, 'logo');
-
-    logo.setVelocity(100, 200);
-    logo.setBounce(1, 1);
-    logo.setCollideWorldBounds(true);
-
-    emitter.startFollow(logo);
-}
-
-/*function create() {
-
-    var text = "Hello World!";
-    var style = {
-        fontSize: "65px",
-        fontFamily: "Arial",
-        color: "#ff0044",
-        align: "center"
-    };
-      this.add.text(0, 300, text, style);
-
-}*/
-</script>
-
 </html>
